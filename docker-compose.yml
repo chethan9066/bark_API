@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  api-server:
+    build:
+      context: ./api_server/src
+      dockerfile: Dockerfile
+    container_name: api-server
+    image: bark/api
+    restart: always
+    ports:
+      - "8000:8000"
+    command: uvicorn main:app --host 0.0.0.0 --port 8000
+    
