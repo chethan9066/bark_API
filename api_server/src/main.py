@@ -5,15 +5,13 @@ from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 
 # Schema
-
-
 class TextPrompt(BaseModel):
     text: str
 
 
 app = FastAPI()
 
-# preload_models()
+preload_models()
 
 # text_prompt = """
 #      Hello, my name is chethan. And, uh — and I like pizza. [laughs]
