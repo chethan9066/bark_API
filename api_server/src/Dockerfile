@@ -10,7 +10,7 @@ COPY ./src ./src
 
 #install dependancy
 RUN pip install -r requirements.txt
-RUN pip install ./bark
+RUN pip install git+https://github.com/suno-ai/bark.git
 RUN pip uninstall -y torch torchvision torchaudio
 RUN pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu118
 
